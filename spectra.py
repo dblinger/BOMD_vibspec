@@ -176,18 +176,14 @@ class Spectra(object):
             print "{0:.2f}".format(self.frequency[kdx][i]*27.2114),\
                   "{0:.2f}".format(self.spectra[kdx][i])
         
-            
-
-         
-
-
 if __name__ == '__main__':
 #    cadmium = Spectra(x='HeHp_bomd',y='HeHp_bomd', z='HeHp_bomd',d=10000,trans='fourier')
     cadmium = Spectra(x='HF_bomd',y='HF_bomd', z='HF_bomd',d=10000,trans='fourier')
+#    cadmium = Spectra(x='HF_bomd',y='HF_bomd', z='HF_bomd',d=10000,trans='pade')
 #    cadmium = Spectra(x='H2_bomd',y='H2_bomd', z='H2_bomd',d=1000)
 #    cadmium = Spectra(x='watercationsmallbomd',y='watercationsmallbomd', z='watercationsmallbomd',d=1000, trans='fourier')
-    cadmium.peaks(9)
-    cadmium.plot(xlim=[0,1],ylim=[0,1],save='cd.pdf',show=True,
-        no_yticks=True,color='green',legend='Cd')
+#    cadmium.peaks(9)
+#    cadmium.plot(xlim=[0,1],ylim=[0,1],save='cd.pdf',show=True,
+#        no_yticks=True,color='green',legend='Cd')
     
 

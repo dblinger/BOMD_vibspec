@@ -214,7 +214,7 @@ class RealTime(object):
 #                np.abs(self.frequency**2/(2.0*np.pi)*fw_im*fw_re)
             self.fourier = \
                 np.abs(1.e0/(2.0*np.pi)*np.abs(p(W)/q(W))**2)
-            np.savetxt('fttdata.txt', np.transpose([self.frequency/4.55633E-6,self.fourier]))  
+            np.savetxt('fftdata_cm-1_pade.txt', np.transpose([self.frequency/4.55633E-6,self.fourier]))  
         elif spectra.lower() == 'ecd':
             self.fourier = \
                 (17.32*fw_re)/(np.pi*kick_strength)
@@ -319,7 +319,7 @@ class RealTime(object):
         if spectra.lower() == 'abs':
             self.fourier = \
                 np.abs(self.frequency**2/(2.0*np.pi)*np.abs(fw)**2)
-            np.savetxt('fttdata.txt', np.transpose([self.frequency/4.55633E-6,self.fourier]))  
+            np.savetxt('fftdata_cm-1_fourier.txt', np.transpose([self.frequency/4.55633E-6,self.fourier]))  
 
 
         elif spectra.lower() == 'ecd':
